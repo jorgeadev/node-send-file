@@ -2,24 +2,36 @@
 	"name": "send",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
-		"dev": "nodemon ./index.js",
-		"start": "node ./index.js"
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix"
 	},
 	"keywords": [],
 	"author": "Jorge A. Gomez",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
-		"bcrypt": "5.1.1",
-		"dotenv": "16.4.4",
-		"eslint": "9.26.0",
-		"express": "4.20.0",
-		"express-validator": "7.0.1",
-		"jsonwebtoken": "9.0.2",
-		"mongoose": "8.9.5"
+		"bcrypt": "6.0.0",
+		"dotenv": "17.2.3",
+		"eslint": "9.39.2",
+		"express": "5.2.1",
+		"express-validator": "7.3.1",
+		"jsonwebtoken": "9.0.3",
+		"mongoose": "9.1.6"
 	},
 	"devDependencies": {
-		"nodemon": "3.0.3"
+		"@eslint/js": "9.39.2",
+		"@types/bcrypt": "6.0.0",
+		"@types/express": "5.0.6",
+		"@types/jsonwebtoken": "9.0.10",
+		"@types/node": "25.2.0",
+		"globals": "17.3.0",
+		"nodemon": "3.1.11",
+		"tsx": "4.21.0",
+		"typescript": "5.9.3",
+		"typescript-eslint": "8.54.0"
 	}
 }
